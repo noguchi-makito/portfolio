@@ -274,15 +274,6 @@ body {
 }
 
 @media screen and (max-width: 896px) {
-  #content .profile_box {
-    flex-direction: column;
-  }
-  #content .profile_box__left {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 480px) {
   #header .navigation .menu {
     display: none;
   }
@@ -370,6 +361,15 @@ body {
     visibility: visible;
     opacity: 1;
   }
+  #content .profile_box {
+    flex-direction: column;
+  }
+  #content .profile_box__left {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
   #content .profile_box__left {
     width: 100%;
   }

@@ -273,19 +273,6 @@ body {
 
 //タブレット
 @media screen and (max-width: 896px) {
-  #content {
-    .profile_box {
-      flex-direction: column;
-      &__left {
-        width: 80%;
-      }
-    }
-  }
-}
-
-//スマホ
-@media screen and (max-width: 480px) {
-  //ヘッダー
   #header {
     .navigation {
       .menu {
@@ -377,7 +364,18 @@ body {
       }
     }
   }
+  #content {
+    .profile_box {
+      flex-direction: column;
+      &__left {
+        width: 80%;
+      }
+    }
+  }
+}
 
+//スマホ
+@media screen and (max-width: 480px) {
   #content {
     .profile_box {
       &__left {
