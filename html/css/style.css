@@ -52,6 +52,10 @@ body {
   color: #67baca;
 }
 
+#header .navigation .smp_menu {
+  display: none;
+}
+
 .fixed {
   position: fixed;
 }
@@ -263,4 +267,110 @@ body {
   padding: 20px 0;
   text-align: center;
   color: #fff;
+}
+
+#footer .noscroll {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 896px) {
+  #content .profile_box {
+    flex-direction: column;
+  }
+  #content .profile_box__left {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #header .navigation .menu {
+    display: none;
+  }
+  #header .navigation .smp_menu {
+    display: block;
+  }
+  #header .navigation .smp_menu .burger-btn {
+    display: block;
+    width: 39px;
+    height: 39px;
+    position: relative;
+    z-index: 3;
+    border: none;
+    background: none;
+  }
+  #header .navigation .smp_menu .bar {
+    width: 20px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0087aa;
+  }
+  #header .navigation .smp_menu .bar_top {
+    top: 10px;
+  }
+  #header .navigation .smp_menu .bar_mid {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #header .navigation .smp_menu .bar_bottom {
+    bottom: 10px;
+  }
+  #header .navigation .smp_menu .burger-btn.close .bar_top {
+    transform: translate(-50%, 10px) rotate(45deg);
+    transition: transform 0.3s;
+  }
+  #header .navigation .smp_menu .burger-btn.close .bar_mid {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  #header .navigation .smp_menu .burger-btn.close .bar_bottom {
+    transform: translate(-50%, -8px) rotate(-45deg);
+    transition: transform 0.3s;
+  }
+  #header .navigation .smp_menu .nav-wrapper {
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    width: 100vw;
+    z-index: 2;
+  }
+  #header .navigation .smp_menu .nav-wrapper.slide-in {
+    transform: translateX(0);
+  }
+  #header .navigation .smp_menu .header-nav {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+  }
+  #header .navigation .smp_menu .nav-list {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+  #header .navigation .smp_menu .nav-item {
+    font-size: 16px;
+  }
+  #header .navigation .smp_menu .nav-item a {
+    text-decoration: none;
+    color: #0087aa;
+    display: block;
+    padding: 20px 0;
+  }
+  #header .navigation .smp_menu .nav-wrapper.fade {
+    visibility: visible;
+    opacity: 1;
+  }
+  #content .profile_box__left {
+    width: 100%;
+  }
 }

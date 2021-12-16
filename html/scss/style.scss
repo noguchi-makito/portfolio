@@ -49,6 +49,10 @@ body {
         }
       }
     }
+
+    .smp_menu {
+      display: none;
+    }
   }
 }
 
@@ -260,5 +264,125 @@ body {
     padding: 20px 0;
     text-align: center;
     color: #fff;
+  }
+
+  .noscroll {
+    overflow: hidden;
+  }
+}
+
+//タブレット
+@media screen and (max-width: 896px) {
+  #content {
+    .profile_box {
+      flex-direction: column;
+      &__left {
+        width: 80%;
+      }
+    }
+  }
+}
+
+//スマホ
+@media screen and (max-width: 480px) {
+  //ヘッダー
+  #header {
+    .navigation {
+      .menu {
+        display: none;
+      }
+      .smp_menu {
+        display: block;
+        .burger-btn {
+          display: block;
+          width: 39px;
+          height: 39px;
+          position: relative;
+          z-index: 3;
+          border: none;
+          background: none;
+        }
+        .bar {
+          width: 20px;
+          height: 2px;
+          display: block;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #0087aa;
+        }
+        .bar_top {
+          top: 10px;
+        }
+        .bar_mid {
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .bar_bottom {
+          bottom: 10px;
+        }
+        .burger-btn.close .bar_top {
+          transform: translate(-50%, 10px) rotate(45deg);
+          transition: transform 0.3s;
+        }
+        .burger-btn.close .bar_mid {
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+        .burger-btn.close .bar_bottom {
+          transform: translate(-50%, -8px) rotate(-45deg);
+          transition: transform 0.3s;
+        }
+        .nav-wrapper {
+          height: 100vh;
+          left: 0;
+          position: fixed;
+          top: 0;
+          transform: translateX(100%);
+          transition: transform 0.3s;
+          width: 100vw;
+          z-index: 2;
+        }
+        .nav-wrapper.slide-in {
+          transform: translateX(0);
+        }
+        .header-nav {
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.8);
+          z-index: 2;
+        }
+        .nav-list {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          width: 100%;
+        }
+        .nav-item {
+          font-size: 16px;
+          a {
+            text-decoration: none;
+            color: #0087aa;
+            display: block;
+            padding: 20px 0;
+          }
+        }
+        .nav-wrapper.fade {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  #content {
+    .profile_box {
+      &__left {
+        width: 100%;
+      }
+    }
   }
 }
